@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <zlib.h>
+#include <zconf.h>
+int main()
+{
+	gzFile gzfp = gzopen("test.gz","wb");
+	if(NULL == gzfp)
+	{
+		perror("gzopen file failed");
+		exit(-1);
+	}
+	char buf[] = "qwertyuiopasdfghjklzxcvbnm";
+	int len = strlen(buf);
+	int ret =0;
+	ret= gzwrite(gzfp,buf,len);
+	printf("gzwrite %d bytes\n", ret);
+	gzclose(gzfp);
+	return 0;
+}

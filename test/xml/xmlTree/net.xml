@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<net>
+    <plate0>
+        <status0>on</status0>
+        <type0>ip</type0>
+        <ptl0>gb32960</ptl0>
+        <ip0>10.200.4.38</ip0>
+        <port0>7789</port0>
+        <url0>td013.e-bus.cc</url0>
+        <urlport0>7781</urlport0>
+    </plate0>
+</net>

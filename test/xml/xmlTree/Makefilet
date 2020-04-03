@@ -1,0 +1,4 @@
+test.d : test.cpp 
+	rm $@; \
+	gcc -MM test.cpp > test.i  \
+	sed 's,\($(*F)\)\.o[ :]*,$*.o $@ : ,g' < test.i > test.d

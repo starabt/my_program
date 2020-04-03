@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <part id = "01" name="obj1">
+        <name>I am Maoshan Xu</name>
+        <age>I am 23 years old</age>
+        <sex>man</sex>
+    </part>
+    <part2 id="02" name="obj2">
+        <name2>I am Xiaoyao Li</name2>
+        <age2>I am 22 years old</age2>
+        <sex2>man</sex2>
+    </part2>
+</root>

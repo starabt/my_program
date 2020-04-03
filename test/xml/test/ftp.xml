@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <ftp trans="d">
+    <servIP>200.200.4.193</servIP>
+    <port>10001</port>
+    <user>lxc</user>
+    <psw>123456</psw>
+  </ftp>
+  <palte client_N="0">
+    <servIP>200.200.4.194</servIP>
+    <port>10094</port>
+  </palte>
+</root>

@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AES	AES.h	/^class AES$/;"	c
+AddRoundKey	AES.cpp	/^void AES::AddRoundKey(unsigned char mtx[4*4], unsigned int k[4])  $/;"	f	class:AES
+BOY	test.c	3;"	d	file:
+BUFFER_SIZE	client2.c	15;"	d	file:
+BUFFER_SIZE	nonblock_server.c	16;"	d	file:
+BUFFER_SIZE	test2/client.c	12;"	d	file:
+BUFFER_SIZE	test2/server.c	11;"	d	file:
+Cal_BCC_CheckSum	AESserver.cpp	/^char Cal_BCC_CheckSum(const char *pData,int len)$/;"	f
+GFMul	AES.cpp	/^unsigned char AES::GFMul(unsigned char a, unsigned char b) {   $/;"	f	class:AES
+InvMixColumns	AES.cpp	/^void AES::InvMixColumns(unsigned char mtx[4*4])  $/;"	f	class:AES
+InvShiftRows	AES.cpp	/^void AES::InvShiftRows(unsigned char mtx[4*4])  $/;"	f	class:AES
+InvSubBytes	AES.cpp	/^void AES::InvSubBytes(unsigned char mtx[4*4])  $/;"	f	class:AES
+Inv_S_Box	AES.cpp	/^unsigned char Inv_S_Box[16][16] = {  $/;"	v
+KeyExpansion	AES.cpp	/^unsigned int AES::KeyExpansion(unsigned char *key, unsigned int *w)  $/;"	f	class:AES
+MAX_QUE_CONN_NM	nonblock_server.c	15;"	d	file:
+MAX_QUE_CONN_NM	test2/server.c	12;"	d	file:
+MixColumns	AES.cpp	/^void AES::MixColumns(unsigned char mtx[4*4])  $/;"	f	class:AES
+Nk	AES.h	5;"	d
+Nr	AES.h	4;"	d
+OBJS	Makefile	/^OBJS = AESserver.o  AES.o$/;"	m
+PORT	client2.c	14;"	d	file:
+PORT	nonblock_server.c	14;"	d	file:
+PORT	test2/client.c	11;"	d	file:
+PORT	test2/server.c	10;"	d	file:
+Rcon	AES.cpp	/^unsigned int Rcon[10] = {0x01000000, 0x02000000, 0x04000000, 0x08000000, 0x10000000,   $/;"	v
+Rotword	AES.cpp	/^unsigned int AES::Rotword(unsigned int rw)  $/;"	f	class:AES
+S_Box	AES.cpp	/^unsigned char S_Box[16][16] = {  $/;"	v
+SetAESkey	AES.cpp	/^void AES::SetAESkey(unsigned char *key)$/;"	f	class:AES
+ShiftRows	AES.cpp	/^void AES::ShiftRows(unsigned char mtx[4*4])  $/;"	f	class:AES
+SubBytes	AES.cpp	/^void AES::SubBytes(unsigned char mtx[4*4])  $/;"	f	class:AES
+Subword	AES.cpp	/^unsigned int AES::Subword(unsigned int sw)  $/;"	f	class:AES
+TARGEt	Makefile	/^TARGEt := AESserver$/;"	m
+Word	AES.cpp	/^unsigned int AES::Word(unsigned char &k1, unsigned char &k2, unsigned char &k3, unsigned char &k4)  $/;"	f	class:AES
+_AES_H_	AES.h	2;"	d
+add	test.c	/^int add(int x,int y)$/;"	f
+cmp	AES.cpp	/^unsigned int cmp(unsigned char *buf1,unsigned char *buf2,unsigned int len)$/;"	f
+decrypt	AES.cpp	/^void AES::decrypt(unsigned char *in, unsigned int *w)  $/;"	f	class:AES
+decryptlong	AES.cpp	/^unsigned int AES::decryptlong(unsigned char *encryptedMsg,unsigned int lenC,unsigned int *w,unsigned char *mArray)$/;"	f	class:AES
+encrypt	AES.cpp	/^void AES::encrypt(unsigned char *in, unsigned int *w)  $/;"	f	class:AES
+encryptlong	AES.cpp	/^unsigned int AES::encryptlong(unsigned char *message,unsigned int lenM,unsigned int *w,unsigned char *cArray)$/;"	f	class:AES
+hello	test.c	/^void hello(void)$/;"	f
+main	AESserver.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	client.c	/^int main(int argc, char *argv[])$/;"	f
+main	client2.c	/^int main(int argc, char *argv[])$/;"	f
+main	nonblock_server.c	/^int main()$/;"	f
+main	server.c	/^int main(int argc, char *argv[])$/;"	f
+main	test.c	/^int main()$/;"	f
+main	test2/client.c	/^int main(int argc, char const *argv[])$/;"	f
+main	test2/server.c	/^int main()$/;"	f
+ranMsg	AES.cpp	/^unsigned char ranMsg(unsigned char *buf)$/;"	f

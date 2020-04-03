@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<net>
+    <status0>on</status0>
+    <type0>ip</type0>
+    <ptl0>gb32960</ptl0>
+    <ip0>120.76.154.240</ip0>
+    <port0>7789</port0>
+    <url0>td013.e-bus.cc</url0>
+    <urlport0>7781</urlport0>
+    <status1>off</status1>
+    <type1>ip</type1>
+    <ptl1>gb32960</ptl1>
+    <ip1>120.76.154.240</ip1>
+    <port1>7789</port1>
+    <url1>td014.e-bus.cc</url1>
+    <urlport1>7781</urlport1>
+    <status2>off</status2>
+    <type2>ip</type2>
+    <ptl2>gb32960</ptl2>
+    <ip2>120.76.154.240</ip2>
+    <port2>7789</port2>
+    <url2>td000.e-bus.cc</url2>
+    <urlport2>7781</urlport2>
+</net>

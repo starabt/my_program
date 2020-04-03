@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<ftp>
+    <servIP>10.200.4.37</servIP>
+    <port>10094</port>
+    <user>Lxc</user>
+    <psw>12345</psw>
+    <servDir>snap</servDir>
+</ftp>

@@ -1,0 +1,15 @@
+#!/bin/bash
+uploadDir=./test
+# echo ${uploadDir}
+# echo ${uploadDir}.tar.gz
+# echo ${uploadDir}/*
+set i=0
+while ((1))
+do
+	((i++))
+	echo ${i}
+	sleep 1
+done
+tar -czvf ${uploadDir}.tar.gz ${uploadDir}
+./ftp_upload ${uploadDir}.tar.gz &
+rm -rf ${uploadDir}/*

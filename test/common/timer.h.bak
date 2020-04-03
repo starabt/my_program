@@ -1,0 +1,43 @@
+#ifndef TIMER_H_
+#define TIMER_H_
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <errno.h>
+#include <unistd.h>
+#include <signal.h>
+#if 0//this is instruction
+
+struct itimerspec 
+{
+    struct timespec it_interval;  /* Timer interval(timer循环时间间隔) */
+    struct timespec it_value;     /* Initial expiration(timer初次到期时间间隔) */
+};
+
+
+struct timespec 
+{
+    time_t tv_sec;        /* Seconds */
+    long   tv_nsec;        /* Nanoseconds(纳秒:十亿分之一秒) */
+};
+
+#endif
+
+// #ifdef __cplusplus
+// extern "C"{
+// #endif
+
+typedef void (*timer_callback)(union sigval sigV);
+typedef struct 
+{
+	timer_t timerId; //标识定时器ID
+	struct itimerspec it;	//设置定时时间（timespec ,it_value for the first ,it_interval for the later interval）
+	int timerState;
+}TIMER_INFO;
+int timer_start(TIMER_INFO &timer_info,timer_callback timer_cb_func,int sigId);
+int timer_stop(timer_t timer_id);
+// #ifdef __cplusplus
+// }
+// #endif
+#endif

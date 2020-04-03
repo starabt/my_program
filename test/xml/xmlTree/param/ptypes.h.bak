@@ -1,0 +1,131 @@
+/***********************************************************
+    Copyright (C), 2016,Guang Zhou Tongda auto electric Co., Ltd.
+    File name:      ptypes.h
+    Author:         Tony gao
+    Version:        1.0
+    Date:           2017/02/18
+    Description:    param参数类型定义头文件
+    History:
+        Date            Author          Version       Modification
+*************************************************************/
+#ifndef __PTYPES_H__
+#define __PTYPES_H__
+
+#include "const.h"
+
+#define PARAM_CONFIG_MAX_MEMBERS	200
+#define MAX_CONFIG_MONITOR_CENTER   2   //监控中心最大数
+#define MAX_CONFIG_CAN_NUM          4  //最多支持几路CAN
+
+#define PACK_ALIGN	__attribute__((packed))
+
+//此结构体的大小固定为512bytes
+typedef struct _ParamConfigStoreHead_
+{
+	uint	size;            // SYS_CONFIG 配置结构体的大小
+	uint 	totalMembers;    // SYS_CONFIG 有多少个成员
+	ushort 	memberSize[PARAM_CONFIG_MAX_MEMBERS];    //每个结构体的大小
+	char	mark[16];         //  标识
+	char	reserved[80];
+} PACK_ALIGN PARAM_CONFIG_STORE_HEAD;
+
+//
+// 公共结构体
+//
+
+// 配置结构体头
+typedef struct _ParamConfigHead_
+{
+	char	signature[8];        // 配置文件标识
+	char	reserved[16];
+} PACK_ALIGN PARAM_CONFIG_HEAD;
+
+//
+// 设备基本信息
+//
+typedef struct _ParamConfigBaseInfo_
+{
+	char	devModel[24];               // 设备型号
+	char	hardwareVersion[32];        // 硬件版本号
+	char	softwareVersion[32];        // 软件版本号
+	char	configureVersion[8];        // 配置版本号
+	char	devName[32];                // 设备名称
+	char	reserved[6];        //
+}PACK_ALIGN PARAM_CONFIG_BASE_INFO;
+
+//
+// 网络参数
+//
+
+// 1.服务器IP+端口号
+typedef struct _ConfigNetworkIPPort_
+{
+	uchar	centerTotalNum;        // 一共有几路监控中心
+	char    centerip[16];		//监控中心服务器IP1
+	char	connectPort[6];         // 连接端口
+	char	uploadprotocoltype[32];      // 上传数据协议类型
+	uchar	 centerNum;        // 标识是哪一路监控中心
+	char	reserved[16];
+} PACK_ALIGN PARAM_CONFIG_NETWORK;
+
+
+//服务器管理
+/*
+typedef struct _ParamConfigNetwork_
+{
+	CONFIG_NETWORk_IP_PORT    	monitor[MAX_CONFIG_MONITOR_CENTER];   // 管理所有监控中心IP和端口
+	
+} PACK_ALIGN PARAM_CONFIG_NETWORK;
+*/
+
+
+//
+// 车辆信息
+//
+typedef struct _ParamConfigCarInfo_
+{
+	char    userinfo[32];      // 终端用户信息（车厂信息）
+	char	devserialNo[18];   // 产品序列号17位	
+	char 	vin[18];           // 车辆VIN号17位
+	char	reserved[8];
+} PACK_ALIGN PARAM_CONFIG_CAR_INFO;
+
+
+
+//
+// CAN波特率配置
+//
+//
+typedef struct _CanSt_
+{
+	uchar   cantotalnum;
+	uint	baudRate;    // 波特率
+	char    cancollectprotocoltype[32];      // CAN采集协议类型版本信息
+	uchar	canPort;        // 标识哪一路can
+	char    candevname[5];  //can0
+	char 	reserved[4];
+} PACK_ALIGN PARAM_CONFIG_CAN;
+
+/*
+typedef struct _ParamConfigCan_
+{
+	CAN_ST	can[MAX_CONFIG_CAN_NUM];        //管理所有的CAN波特率配置
+} PACK_ALIGN PARAM_CONFIG_CAN;
+*/
+
+//
+// ftp 参数
+//
+typedef struct _ParamConfigFtp_
+{
+	ushort 	enable;        // 是否使能
+	ushort 	port;        // 服务器端口
+	char	ip[64];                // 服务器ip
+	char 	user[32];        // 用户名
+	char   	passwd[32];        // 密码
+	char	reserved[8];
+} PACK_ALIGN PARAM_CONFIG_FTP;
+
+#undef PACK_ALIGN
+#endif
+
